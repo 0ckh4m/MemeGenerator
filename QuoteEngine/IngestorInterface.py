@@ -4,7 +4,8 @@ from typing import List
 from .QuoteModel import QuoteModel 
 
 class IngestorInterface(ABC):
-
+    """ Abstract class for the Ingestor classes of specific file types. """
+    
     allowed_extensions = []
 
     @classmethod

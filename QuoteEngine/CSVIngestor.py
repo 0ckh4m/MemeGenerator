@@ -5,6 +5,8 @@ from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
 
 class CSVIngestor(IngestorInterface):
+    """ Ingestor of CSV files. Returns a list of Quote objects. """
+    
     allowed_extensions = ['csv']
 
     @classmethod

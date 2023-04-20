@@ -8,6 +8,8 @@ from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
 
 class PDFIngestor(IngestorInterface):
+    """ Ingestor of PDF files. Returns a list of Quote objects. """
+
     allowed_extensions = ['pdf']
 
     @classmethod

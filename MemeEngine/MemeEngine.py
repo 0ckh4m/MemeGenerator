@@ -2,6 +2,10 @@ from PIL import Image, ImageDraw, ImageFont
 import random
 
 class MemeEngine():
+    """ Core functionality of the application. 
+        Takes in: image, message and author.
+        Returns a new image containing the message and the author.
+    """
     def __init__(self, output_dir='./out_img'):
         self.output_dir = output_dir
 
@@ -28,7 +32,6 @@ class MemeEngine():
         font = ImageFont.truetype('./fonts/LilitaOne-Regular.ttf', size=20)
         text_x_position = random.randint(0, width - 2 * len(message)) # ? this is ot right! How can I fix this so the message doesn't get cut off?
         text_y_position = random.randint(0, (height - font.size))
-        # draw.text((10, 30), message, font=font, fill='white') # ! delete this line
         draw.text((text_x_position, text_y_position), message, font=font, fill='white')
 
         # saving the output file
@@ -41,15 +44,3 @@ class MemeEngine():
             raise Exception('cannot save image into file')
 
         return destination
-
-# ! remove the code bellow
-# if __name__=='__main__':
-#     test = MemeEngine()
-#     print(test.make_meme(img_path='./_data/photos/dog/xander_1.jpg', text='Just a test', author='myself'))
-
-
-
-
-
-
-

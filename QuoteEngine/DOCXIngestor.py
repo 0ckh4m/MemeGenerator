@@ -5,6 +5,8 @@ from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
 
 class DOCXIngestor(IngestorInterface):
+    """ Ingestor of DOCX files. Returns a list of Quote objects. """
+
     allowed_extensions = ['docx']
 
     @classmethod

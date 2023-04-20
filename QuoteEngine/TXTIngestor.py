@@ -4,6 +4,8 @@ from .IngestorInterface import IngestorInterface
 from .QuoteModel import QuoteModel
 
 class TXTIngestor(IngestorInterface):
+    """ Ingestor of TXT files. Returns a list of Quote objects. """
+
     allowed_extensions = ['txt']
 
     @classmethod

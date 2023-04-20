@@ -9,6 +9,8 @@ from .TXTIngestor import TXTIngestor
 
 
 class Ingestor(IngestorInterface):
+    """ Encapsulates all the Ingestor classes and executes the appropriate ingestor given a specific file type. """
+    
     ingestors = [DOCXIngestor, CSVIngestor, TXTIngestor, PDFIngestor] 
 
     @classmethod
