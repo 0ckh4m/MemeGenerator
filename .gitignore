@@ -3,3 +3,4 @@ run_test.py
 run_test2.py
 venv
 old-requirements.txt
+.vscode/
